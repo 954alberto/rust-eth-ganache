@@ -13,7 +13,7 @@ use hex::ToHex;
 #[tokio::main]
 async fn main() -> Result<()> {
     // Define a mnemonic for a wallet (used to derive private keys)
-    let mnemonic = "gas monster ski craft below illegal discover limit dog bundle bus artefact";
+    let mnemonic = "brisk usual burst upper buddy female library dial rifle mercy globe nurse";
 
     // Create and launch a Ganache instance (local Ethereum test blockchain) with the mnemonic
     let ganache = Ganache::new().mnemonic(mnemonic).spawn();
@@ -80,7 +80,7 @@ mod tests {
 
     #[tokio::test]
     async fn test_wallet_generation() -> Result<()> {
-        let mnemonic = "gas monster ski craft below illegal discover limit dog bundle bus artefact";
+        let mnemonic = "brisk usual burst upper buddy female library dial rifle mercy globe nurse";
 
         // Create and launch a Ganache instance (local Ethereum test blockchain) with the mnemonic
         let ganache = Ganache::new().mnemonic(mnemonic).spawn();
