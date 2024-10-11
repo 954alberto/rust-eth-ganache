@@ -8,9 +8,13 @@ author = "Alberto Rodriguez Garcia"
 name = "transact"
 path = "src/simple_transactions.rs"
 
+[[bin]]
+name = "deploy"
+path = "src/contract_deploy.rs"
+
 [dependencies]
 clap = { version = "4.5.20", features = ["derive"] }
-ethers = "2.0.14"
+ethers = { version = "2.0.14" }
 ethers-providers = { version = "2.0.14", features = ["ws"] }
 ethers-solc = { version = "2.0.14", features = ["full"] }
 eyre = "0.6.12"

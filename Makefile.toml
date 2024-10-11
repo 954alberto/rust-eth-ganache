@@ -7,10 +7,15 @@ args = ["fmt", "--", "--emit=files"]
 command = "cargo"
 args = ["clean"]
 
+[tasks.clippy]
+command = "cargo"
+args = ["clippy"]
+dependencies = ["clean"]
+
 [tasks.test]
 command = "cargo"
 args = ["test"]
-dependencies = ["clean"]
+dependencies = ["clippy"]
 
 [tasks.audit]
 command = "cargo"
@@ -26,6 +31,7 @@ dependencies = ["audit"]
 dependencies = [
     "format",
     "clean",
+    "clippy",
     "test",
     "audit",
     "build"
